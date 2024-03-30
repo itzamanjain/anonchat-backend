@@ -1,5 +1,5 @@
-import Comment from "../../models/comment";
-import User from "../../models/user";
+import Comment from "../../models/comment.model.js";
+import User from "../../models/user.model.js";
 
 const publishComment = async (req, res) => {
   try {

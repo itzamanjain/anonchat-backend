@@ -22,9 +22,9 @@ app.get('/',(req,res)=>{
     res.send("hello from backend");
 })
 
-// connectDB().then(() => 
-//     console.log("mongodb connected!!!")
-// );
+await connectDB().then(() => 
+    console.log("mongodb connected!!!")
+);
 
 app.use('/',userRouter)
 app.use('/',postRouter)

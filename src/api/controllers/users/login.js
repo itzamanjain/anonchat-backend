@@ -1,9 +1,9 @@
 import jwt from 'jsonwebtoken'
-import User from '../../models/user.model'
+import User from '../../models/user.model.js'
 import bcrypt from 'bcrypt'
 
 
-export default login = async(req,res) =>{
+const  login = async(req,res) =>{
     const {email,password} = req.body;
     const user = await User.findOne({email});
     if(!user){
@@ -23,3 +23,5 @@ export default login = async(req,res) =>{
         res.status(401).json({message:"login failed Password or email doesn't match!"})
     }
 }
+
+export default login    

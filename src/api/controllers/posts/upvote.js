@@ -1,5 +1,5 @@
-import User from '../../models/user.model'
-import Post from '../../models/post.model'
+import User from '../../models/user.model.js'
+import Post from '../../models/post.model.js'
 
 
 const saveUpvotes = async(req,res) => {

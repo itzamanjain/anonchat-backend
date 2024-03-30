@@ -1,4 +1,4 @@
-import User from "../../models/user.model";
+import User from "../../models/user.model.js";
 
 const saveTopic = async (req, res) => {
   try {

@@ -1,4 +1,4 @@
-import User from '../../models/user.model'
+import User from '../../models/user.model.js'
 
 const userInfo = async(req,res)=>{
     if(req.isGuest){

@@ -1,10 +1,10 @@
-import User from "../../models/user.model";
+import User from "../../models/user.model.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import z from "zod";
 import dotenv from "dotenv";
 
-export default register = async (req, res) => {
+const  register = async (req, res) => {
   try {
     const { email, password, username } = req.body;
 
@@ -90,3 +90,5 @@ export default register = async (req, res) => {
     console.log(error?.message || "Registration Failed");
   }
 };  
+
+export default register;

@@ -1,7 +1,7 @@
-import Post from '../../models/post.model'
-import formatTimeSince from '../../helpers/timestamp-algo'
+import Post from '../../models/post.model.js'
+import formatTimeSince from '../../helpers/timestamp-algo.js'
 
-const searchPost = async(req,res) =>{
+const searchPosts = async(req,res) =>{
     try {
         const searchQuery = new RegExp(`${req.params.searchQuery}`,'i')
         const searchResults = await Post.find({
@@ -27,5 +27,5 @@ const searchPost = async(req,res) =>{
 }
 
 export {
-    searchPost
+    searchPosts
 }

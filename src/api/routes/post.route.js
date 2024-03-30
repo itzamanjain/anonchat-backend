@@ -1,12 +1,12 @@
 import express from 'express';
-import verifyToken from '../../auth/auth-middleware'
-import { publishPost } from '../controllers/posts/create';
-import { editPost } from '../controllers/posts/update';
-import {deletePost} from '../controllers/posts/delete'
-import { saveUpvotes,fetchUpvotes } from '../controllers/posts/upvote';
-import { fetchPost, fetchPostDetails } from '../controllers/posts/fetch';
-import { seachPosts } from '../controllers/posts/search';
-import { calculatePostViews } from '../controllers/posts/views';
+import verifyToken from '../../auth/auth-middleware.js'
+import { publishPost } from '../controllers/posts/create.js';
+import { editPost } from '../controllers/posts/update.js';
+import {deletePost} from '../controllers/posts/delete.js'
+import { saveUpvotes,fetchUpvotes } from '../controllers/posts/upvote.js';
+import { fetchPost, fetchPostDetails } from '../controllers/posts/fetch.js';
+import { searchPosts } from '../controllers/posts/search.js';
+import { calculatePostViews } from '../controllers/posts/views.js';
 
 const router = express.Router();
 
@@ -22,7 +22,7 @@ router.delete('/api/post/delete/:postid',verifyToken,deletePost)
 router.post('/api/post/upvote/:postid',verifyToken,saveUpvotes)
 router.get('/api/post/upvote/:postid',verifyToken,fetchUpvotes)
 
-router.get('/api/searchpost/:searchQuery',seachPosts)
+router.get('/api/searchpost/:searchQuery',searchPosts)
 
 //views
 router.put('/api/post/:id/view',verifyToken,calculatePostViews)

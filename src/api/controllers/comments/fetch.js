@@ -1,5 +1,5 @@
-import Comment from '../../models/comment';
-import Post from '../../models/post';
+import Comment from '../../models/comment.model.js';
+import Post from '../../models/post.model.js';
 
 const fetchComments = async (req, res) => {
     try {

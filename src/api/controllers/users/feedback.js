@@ -1,5 +1,5 @@
-import User from "../../models/user.model";
-import Feedback from "../../models/feedback.model";
+import User from "../../models/user.model.js";
+import {Feedback} from "../../models/feedback.model.js";
 
 const publishFeedback = async (req, res) => {
   try {

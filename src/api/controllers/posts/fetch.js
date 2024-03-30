@@ -1,7 +1,7 @@
-import Post from "../../models/post.model";
+import Post from "../../models/post.model.js";
 import mongoose from "mongoose";
-import trendingAlgo from "../../helpers/trending-algo";
-import timeSinceCreated from "../../helpers/timestamp-algo";
+import trendingAlgo from "../../helpers/trending-algo.js";
+import timeSinceCreated from "../../helpers/timestamp-algo.js";
 const { calculateTrendingScore } = trendingAlgo
 const {formatTimeSince} = timeSinceCreated
 const ObjectId = mongoose.Types.ObjectId;

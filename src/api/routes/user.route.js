@@ -2,13 +2,13 @@ import express from 'express'
 
 
 const router = express.Router()
-import verifyUser from '../controllers/users/verifyUser'
-import userInfo from '../controllers/users/userInfo'
-import verifyToken from '../../auth/auth-middleware'
-import { publishFeedback } from '../controllers/users/feedback'
-import { userBookMarks, fetchBookMarkedUsers, fetchUserBookmarkedPosts } from '../controllers/users/bookmarks'  
-import { saveTopic } from '../controllers/users/topicFollow'
-import { userPostsInfo,editProfile } from '../controllers/users/profile'
+import verifyUser from '../controllers/users/verifyUser.js'
+import userInfo from '../controllers/users/userInfo.js'
+import verifyToken from '../../auth/auth-middleware.js'
+import { publishFeedback } from '../controllers/users/feedback.js'
+import { userBookMarks, fetchBookMarkedUsers, fetchUserBookmarkedPosts } from '../controllers/users/bookmarks.js'  
+import { saveTopic } from '../controllers/users/topicFollow.js'
+import { userPostsInfo,editProfile } from '../controllers/users/profile.js'
 
 router.post('/api/verification',verifyUser)
 router.get('/api/user',verifyToken,userInfo)
