@@ -67,7 +67,7 @@ const  register = async (req, res) => {
       const newUser = new User({
         email,
         username,
-        password,
+        password:hashedPassword,
         verificationCode,
         college:organization,
       })
@@ -80,7 +80,7 @@ const  register = async (req, res) => {
         process.env.JWT_SECRET,
       )
 
-      sendEmail(email,verificationCode)
+      // sendEmail(email,verificationCode)
 
       res.status(201).json({
         token:token,
