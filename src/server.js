@@ -3,6 +3,9 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import connectDB from '../src/config/database.js'
 import userRouter from './api/routes/user.route.js'
+import postRouter from './api/routes/post.route.js'
+import commentRouter from './api/routes/comment.route.js'
+import authRouter from './auth/authentication.js'
 
 dotenv.config({
     path:"./.env",
@@ -24,7 +27,9 @@ app.get('/',(req,res)=>{
 // );
 
 app.use('/',userRouter)
-app.use('/',postUser)
+app.use('/',postRouter)
+app.use('/',commentRouter)
+app.use('/',authRouter)
 
 
 const PORT = process.env.PORT || 4000;
